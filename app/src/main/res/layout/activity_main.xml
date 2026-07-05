@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dashboard"
+    android:fitsSystemWindows="true"
+    android:paddingTop="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- TITLE -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Smart Call Tracker"
+                android:textColor="#D8C5FF"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/btnGPT"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="6dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_search"
+                android:tint="#D8C5FF"/>
+
+            <ImageButton
+                android:id="@+id/btnMusic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_lock_silent_mode_off"
+                android:tint="#D8C5FF"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track calls, earnings and performance"
+            android:textColor="#A8A8C8"
+            android:textSize="14sp"/>
+
+        <!-- FIRST ROW -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACTIVE DAYS"
+                    android:textColor="#BDB6D8"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtTotalDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#C9A8FF"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL AMOUNT"
+                    android:textColor="#BDB6D8"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹0"
+                    android:textColor="@color/cyan_accent"                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- SECOND ROW -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COUNTED CALLS"
+                    android:textColor="#BDB6D8"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtCounted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFB6C1"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MISSED CALLS"
+                    android:textColor="#BDB6D8"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtMissed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFB6C1"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 Monthly Summary"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtCurrentMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="June 2026"
+                android:textColor="#D8C5FF"
+                android:textSize="16sp"/>
+
+            <ProgressBar
+                android:id="@+id/progressMonth"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="16dp"
+                android:max="100"/>
+
+            <TextView
+                android:id="@+id/txtCompletion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="0%"
+                android:textColor="#00E5FF"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtProgressInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0 Days Completed | 0 Remaining"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <!-- QUICK ACTIONS -->
+
+        <!-- QUICK ACTIONS -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Actions"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="@style/Widget.Material3.Button"
+            android:text="🔄 Sync Call Logs"
+            android:textAllCaps="false"
+            android:backgroundTint="#8B5CF6"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btnMonthlyHistory"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="@style/Widget.Material3.Button"
+            android:text="📅 Export Monthly PDF"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:backgroundTint="#8B5CF6"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"/>
+
+
+
+        <Button
+            android:id="@+id/btnStatistics"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="@style/Widget.Material3.Button"
+            android:text="📊 Statistics Dashboard"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:backgroundTint="#8B5CF6"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnSharePdf"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="@style/Widget.Material3.Button"
+            android:text="🔗 Share PDF Report"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:backgroundTint="#8B5CF6"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smart Insights"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your call performance is improving this month."
+                android:textColor="#BDB6D8"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:id="@+id/btnRecords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daily Records"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Settings"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+</ScrollView>

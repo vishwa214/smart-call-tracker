@@ -1,0 +1,27 @@
+<resources>
+
+    <style
+        name="Base.Theme.CallMeRa"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:windowBackground">
+            @drawable/bg_dashboard
+        </item>
+
+    </style>
+
+    <style
+        name="Theme.CallMeRa"
+        parent="Base.Theme.CallMeRa"/>
+
+    <style
+        name="PurpleDialogTheme"
+        parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+
+        <item name="colorSurface">#1B123D</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#C4B5FD</item>
+
+    </style>
+
+</resources>

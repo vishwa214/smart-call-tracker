@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dashboard"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Settings"
+            android:textColor="#D8C5FF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configure your Smart Call Tracker"
+            android:textColor="#A8A8C8"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Configure Settings"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="• Friend Number&#10;• Cost Per Day&#10;• Morning Call Window&#10;• Evening Call Window"
+                android:textColor="#BDB6D8"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📱 Friend Number"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/edtFriendNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Friend Number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDB6D8"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:inputType="phone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💰 Cost Per Day"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/edtCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Cost Per Day"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDB6D8"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌅 Morning Start Time"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/edtMorningStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Morning Start (08:00)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDB6D8"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌅 Morning End Time"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/edtMorningEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Morning End (09:00)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDB6D8"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌇 Evening Start Time"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/edtEveningStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Evening Start (15:30)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDB6D8"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌇 Evening End Time"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/edtEveningEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Evening End (16:00)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BDB6D8"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"/>
+
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:text="💾 Save Settings"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#8B5CF6"/>
+
+    </LinearLayout>
+
+</ScrollView>
